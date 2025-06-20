@@ -9,9 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: '3.7.0'
+
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.6' # Replace with your version
+          flutter-version: '3.29.3' # Replace with your version
 
       - name: Install dependencies
         run: flutter pub get
